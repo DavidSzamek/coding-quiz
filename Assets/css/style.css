@@ -1,0 +1,15 @@
+:root {
+    background-color: #b3ffcc;
+}
+
+.header {
+    display: grid;
+}
+
+.header.highscores {
+    justify-content: left;
+}
+
+.header.timer {
+    justify-content: right;
+}

@@ -1,15 +1,52 @@
+/* Root & Universal Selectors */
+
 :root {
-    background-color: #b3ffcc;
+    background-color: #e5fae9;
 }
 
-.header {
-    display: grid;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
 }
 
-.header.highscores {
-    justify-content: left;
+/* Quiz button styles */
+
+.b1, .b2, .b3, .b4 {
+    padding: 2px;
+    width: 45%;
+    text-align:left;
 }
 
-.header.timer {
-    justify-content: right;
+/* Container for page contents */
+
+.container {
+    border: 2px solid #333;
+    width: 30%;
+    margin: 20px;
+    box-shadow: 5px 8px;
 }
+
+.questionBox {
+    border: 2px solid #333;
+    width: 30%;
+    margin: 20px;
+    
+}
+
+.container h1 {
+    padding: 15px;
+    font-size: 40px;
+}
+
+.container h2 {
+    font-size: 22px;
+    padding: 10px;
+    text-align: left;
+}
+
+li {
+    padding: 10px;
+}
+

@@ -9,22 +9,71 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-<header> 
-    <div id="highscores"> 
-    <h2> View Highscores </h2>
-    </div>
-    <div id="timer">
-    <h2> Timer placeholder </h2>
-    </div>
-</header>
-
 <body>
+<section class="header">
+    <div class ="highscores"> 
+        <h2>View Highscores</h2>
+    </div>
+    <div class ="timerText">
+        <h2>Timer Placeholders</h2>
+    </div>
+</section>
     <div class="container"> 
-        <div class="welcomePage">
-        <h1> Online Coding Quiz </h1>
-        <p> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-        <button> Start Quiz </button>
+        <div id="welcomePage" class="flex-center flex-column">
+            <h1> Online Coding Quiz </h1>
+            <p> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <a class="btn"> Start Quiz</a>
+            <a class="btn" href="highscores.html">Highscores</a>
         </div>
     </div>
+
+<div class="container">
+    <div class="question1">
+        <h2>What does CSS stand for?</h2>
+        <ul>
+            <li><button class="b1">A. Cascading Style Sheets</button></li>
+            <li><button class="b1">B. Computer Style Sheets</button></li>
+            <li><button class="b1">C. Creative Style Sheets</button></li>
+            <li><button class="b1">D. Colorful Style Sheets</button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="question2">
+        <h2>How do you change the text color of an element?</h2>
+        <ul>
+            <li><button class="b2">A. color: </button></li>
+            <li><button class="b2">B. test-color: </button></li>
+            <li><button class="b2">C. text:color </button></li>
+            <li><button class="b2">D. fgcolor: </button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="question3">
+        <h2>How do you insert a comment in a CSS file?</h2>
+        <ul>
+            <li><button class="b3">A. /* this is a comment /* <button></li>
+            <li><button class="b3">B. /* this is a comment */ </button></li>
+            <li><button class="b3">C. // this is a comment </button></li>
+            <li><button class="b3">D. // this is a comment // </button></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="question4">
+        <h2>Which of the following property is used to increase or decrease the size of a font? </h2>
+        <ul>
+            <li><button class="b4">A. font-weight </button></li>
+            <li><button class="b4">B. font-variant </button></li>
+            <li><button class="b4">C. font-size </button></li>
+            <li><button class="b4">D. font </button></li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>

@@ -26,7 +26,10 @@
     width: 30%;
     margin: 20px;
     box-shadow: 5px 8px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .questionBox {
     border: 2px solid #333;
@@ -50,3 +53,9 @@ li {
     padding: 10px;
 }
 
+
+
+
+footer {
+    padding: 20px;
+}

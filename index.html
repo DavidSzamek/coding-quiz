@@ -10,77 +10,87 @@
 </head>
 
 <body>
+    
 <section class="header">
     <div class ="highscores"> 
         <h2>View Highscores</h2>
-    </div>
-    <div class ="timerText">
-        <h2>Timer Placeholders</h2>
+        <h2 class="timer">Seconds left: <span id="timeLeft">100</span></h2>
     </div>
 </section>
+
 <section>
     <div class="container"> 
-        <div class="welcomePage">
+        <div class="welcomePage" id="welcomePage">
             <h1> Online Coding Quiz </h1>
             <p> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-            <a class="btn"> Start Quiz</a>
-            <a class="btn" href="highscores.html">Highscores</a>
+            <button id="startQuiz">Start Quiz</button>
         </div>
     </div>
 </section>
 
 <section>
 <div class="container">
-    <div class="question1">
+    <div class="question" id="question1">
         <h2>What does CSS stand for?</h2>
             <ul>
-                <li><button class="b1">A. Cascading Style Sheets</button></li>
-                <li><button class="b1">B. Computer Style Sheets</button></li>
-                <li><button class="b1">C. Creative Style Sheets</button></li>
-                <li><button class="b1">D. Colorful Style Sheets</button></li>
+                <li><button class="b1" id="q1a" onclick="correctAnswer()">A. Cascading Style Sheets</button></li>
+                <li><button class="b1" id="q1b" onclick="incorrectAnswer()">B. Computer Style Sheets</button></li>
+                <li><button class="b1" id="q1c" onclick="incorrectAnswer()">C. Creative Style Sheets</button></li>
+                <li><button class="b1" id="q1d" onclick="incorrectAnswer()">D. Colorful Style Sheets</button></li>
             </ul>
+            <p class="correct" id="correct">Correct</p>
+            <p class="incorrect" id="incorrect">Incorrect</p>
+            <button class="nextBtn" id="nextBtn">Next Question</button>
     </div>
 </div>
 </section>
 
 <div class="container">
-    <div class="question2">
+    <div class="question" id="question2">
         <h2>How do you change the text color of an element?</h2>
         <ul>
-            <li><button class="b2">A. color: </button></li>
-            <li><button class="b2">B. test-color: </button></li>
-            <li><button class="b2">C. text:color </button></li>
-            <li><button class="b2">D. fgcolor: </button></li>
+            <li><button class="b2" onclick="correctAnswer1()">A. color: </button></li>
+            <li><button class="b2" onclick="incorrectAnswer1()">B. test-color: </button></li>
+            <li><button class="b2" onclick="incorrectAnswer1()">C. text:color </button></li>
+            <li><button class="b2" onclick="incorrectAnswer1()">D. fgcolor: </button></li>
         </ul>
+        <p class="correct1" id="correct1">Correct</p>
+        <p class="incorrect1" id="incorrect1">Incorrect</p>
+        <button class="nextBtn1" id="nextBtn1">Next Question</button>
     </div>
 </div>
 
 <div class="container">
-    <div class="question3">
+    <div class="question" id="question3">
         <h2>How do you insert a comment in a CSS file?</h2>
         <ul>
-            <li><button class="b3">A. /* this is a comment /* <button></li>
-            <li><button class="b3">B. /* this is a comment */ </button></li>
-            <li><button class="b3">C. // this is a comment </button></li>
-            <li><button class="b3">D. // this is a comment // </button></li>
+            <li><button class="b3" onclick="incorrectAnswer2()">A. /* this is a comment /* <button></li>
+            <li><button class="b3" onclick="correctAnswer2()">B. /* this is a comment */ </button></li>
+            <li><button class="b3" onclick="incorrectAnswer2()">C. // this is a comment </button></li>
+            <li><button class="b3" onclick="incorrectAnswer2()">D. // this is a comment // </button></li>
         </ul>
+        <p class="correct2" id="correct2">Correct</p>
+        <p class="incorrect2" id="incorrect2">Incorrect</p>
+        <button class="nextBtn2" id="nextBtn2">View Score</button>
     </div>
 </div>
 
 <div class="container">
-    <div class="question4">
-        <h2>Which of the following property is used to increase or decrease the size of a font? </h2>
-        <ul>
-            <li><button class="b4">A. font-weight </button></li>
-            <li><button class="b4">B. font-variant </button></li>
-            <li><button class="b4">C. font-size </button></li>
-            <li><button class="b4">D. font </button></li>
-        </ul>
+    <div class="question" id="score">
+        <h2>Score:<span id="finalScore">user score goes here</span></h2>
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" name="initials"><br><br> 
+        <button class="visitHighscores">Visit Highscores</button>
+        <button class="startAgain">Start Again</button>
     </div>
 </div>
+
+<script src="Assets/js/script.js"></script>
 </body>
 
+
+
 <footer>
-    
+
 </footer>
 </html>

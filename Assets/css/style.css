@@ -11,6 +11,20 @@
     color: #333;
 }
 
+/* Header section */
+
+.header {
+    margin: 2%;
+}
+
+.highscores {
+    max-width: 100%;
+}
+
+.timer {
+    float: right;
+}
+
 /* Quiz button styles */
 
 .b1, .b2, .b3, .b4 {
@@ -19,23 +33,68 @@
     text-align:left;
 }
 
-/* Container for page contents */
+/* Next button */
 
-.container {
-    border: 2px solid #333;
+.nextBtn, .nextBtn1, .nextBtn2, .nextBtn3 {
+    margin: 10px;
+    margin-left: 30%;
+    display: none;
+}
+
+/* Score Page Buttons */
+
+.visitHighscores + .startAgain {
+    margin: 10px;
+}
+
+/* Correct/Incorrect */
+
+.correct, .correct1, .correct2, .correct3 {
+    color: green;
+    display: none;
+}
+
+.incorrect, .incorrect1, .incorrect2, .incorrect3 {
+    color: red;
+    display: none;
+}
+
+/* Disable Buttons */
+
+
+/* Container for content on page load */
+
+.containerStart {
     width: 30%;
-    margin: 20px;
-    box-shadow: 5px 8px;
+    margin: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
-
-.questionBox {
+.welcomePage {
     border: 2px solid #333;
+    box-shadow: 5px 8px;
+}
+
+.welcomePage button {
+    display: flex;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    padding: 2px;
+}
+
+
+/* Container for quiz questions */
+
+.container {
     width: 30%;
-    margin: 20px;
-    
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container p {
+    margin: 5%;
 }
 
 .container h1 {
@@ -53,7 +112,11 @@ li {
     padding: 10px;
 }
 
-
+.question {
+    border: 2px solid #333;
+    box-shadow: 5px 8px;
+    display: none;
+}
 
 
 footer {

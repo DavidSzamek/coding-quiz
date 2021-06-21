@@ -1,8 +1,9 @@
-
-
+    let scoreObject = 0;
     const timeLeftDisplay = document.querySelector("#timeLeft")
     const startBtn = document.querySelector("#startQuiz")
     timeLeft = 100 
+
+    // Coundown timer 
 
     function countDown(){
         setInterval(function(){
@@ -14,7 +15,7 @@
         }, 1000)
     }
 
-// Question 1 
+// Question 1
 
     function showQuestion1() {
         document.getElementById("question1").style.display = "block";
@@ -24,7 +25,7 @@
     function correctAnswer() {
         document.getElementById("nextBtn").style.display = "block";
         document.getElementById("correct").style.display = "block";
-        
+  
     }
 
     function incorrectAnswer() {
@@ -33,16 +34,6 @@
         timeLeft = timeLeft - 10;
 
     }
-
-    
-
- 
-    // function disableButtons(){
-    //     document.getElementById("q1a").addClass('disabled');
-    //     document.getElementById("q1b").addClass('disabled');
-    //     document.getElementById("q1c").addClass('disabled');
-    //     document.getElementById("q1d").addClass('disabled');
-    //     }
 
 
 // Question 2
@@ -65,33 +56,40 @@
 
 // Question 3 
 
-function showQuestion3() {
-    document.getElementById("question3").style.display = "block";
-    document.getElementById("question2").style.display = "none";
-}
+    function showQuestion3() {
+        document.getElementById("question3").style.display = "block";
+        document.getElementById("question2").style.display = "none";
+    }
 
-function correctAnswer2() {
-    document.getElementById("nextBtn2").style.display = "block";
-    document.getElementById("correct2").style.display = "block";
+    function correctAnswer2() {
+        document.getElementById("nextBtn2").style.display = "block";
+        document.getElementById("correct2").style.display = "block";
 
-}
+    }
 
-function incorrectAnswer2() {
-    document.getElementById("nextBtn2").style.display = "block";
-    document.getElementById("incorrect2").style.display = "block";
-    timeLeft = timeLeft - 10;
-}
+    function incorrectAnswer2() {
+        document.getElementById("nextBtn2").style.display = "block";
+        document.getElementById("incorrect2").style.display = "block";
+        timeLeft = timeLeft - 10;
+    }
 
 // Score
 
-function showScore() {
-    document.getElementById("score").style.display = "block";
-    document.getElementById("question3").style.display = "none";
-    document.getElementById("finalScore").innerHTML = timeLeft;
-}
+    function showScore() {
+        document.getElementById("score").style.display = "block";
+        document.getElementById("question3").style.display = "none";
 
+        // Insert seconds left into finalScore HTML span
+        document.getElementById("finalScore").innerHTML = timeLeft;
+        scoreObject = timeLeft;
+        //log for score
+        console.log(scoreObject);
+        document.getElementById("timeLeft").style.display = "none";
+    }
 
-// insert seconds left into html 
+    
+
+    
 
 // Start quiz, countdown time & go to Q1 
 startQuiz.addEventListener("click", countDown);
@@ -108,4 +106,31 @@ nextBtn2.addEventListener("click", showScore);
 nextBtn2.addEventListener("click", finalScore)
 
 
+// Highscores JS Page 
 
+function storeAnswer() {
+    let name = document.getElementById("initials").value;
+    let scoreValue = scoreObject;
+
+    const entry = { 
+        initials: name,
+        score: scoreValue
+    }
+    localStorage.setItem("highscore", JSON.stringify(entry));
+
+    console.log(localStorage.getItem("highscore"));
+
+    const highScoresList = document.getElementById("highscoresList");
+    const highscore = JSON.parse(localStorage.getItem("highscore)")) || [];
+
+console.log(highscore);
+}
+
+// Highscores Page
+
+var userHighscore = localStorage.getItem("highscore");
+
+console.log("userHighscore"), JSON.parse(userHighscore);
+
+
+// visitHighscores.addEventListener("click", storeAnswer(scoreObject,document.getElementById("initials").value));

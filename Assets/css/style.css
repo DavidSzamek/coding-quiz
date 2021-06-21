@@ -15,10 +15,15 @@
 
 .header {
     margin: 2%;
+    padding: 20px;
 }
 
 .highscores {
     max-width: 100%;
+}
+
+.highscoresLink {
+    float: left;
 }
 
 .timer {
@@ -28,23 +33,40 @@
 /* Quiz button styles */
 
 .b1, .b2, .b3, .b4 {
-    padding: 2px;
+    padding: 3px;
     width: 45%;
     text-align:left;
 }
 
 /* Next button */
 
-.nextBtn, .nextBtn1, .nextBtn2, .nextBtn3 {
+.nextBtn, .nextBtn1, .nextBtn2 {
     margin: 10px;
-    margin-left: 30%;
+    padding: 3px;
+    margin-left: 35%;
     display: none;
 }
 
+/* Final Score  & Form */
+
+.finalScoreText {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.formInitials, .formBox {
+    margin-left: 30%;
+}
+
+
 /* Score Page Buttons */
 
-.visitHighscores + .startAgain {
-    margin: 10px;
+.visitHighscores, .startAgain {
+    margin-bottom: 10px;
+    margin-left: 60px;
+    padding: 3px;
+    display: inline-block;
 }
 
 /* Correct/Incorrect */
@@ -59,7 +81,6 @@
     display: none;
 }
 
-/* Disable Buttons */
 
 
 /* Container for content on page load */
@@ -82,7 +103,6 @@
     margin-bottom: 10px;
     padding: 2px;
 }
-
 
 /* Container for quiz questions */
 
@@ -115,10 +135,25 @@ li {
 .question {
     border: 2px solid #333;
     box-shadow: 5px 8px;
+    max-width: 400px;
+    min-width: 400px;
     display: none;
 }
 
 
+
 footer {
     padding: 20px;
+}
+
+
+/* Highscores styling page */
+
+.highscoresList {
+    border: 2px solid #333;
+    box-shadow: 5px 8px;
+}
+
+.highscoresList ol {
+    padding: 10px;
 }

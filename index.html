@@ -13,7 +13,7 @@
     
 <section class="header">
     <div class ="highscores"> 
-        <h2>View Highscores</h2>
+        <a href="highscores.html" class="highscoresLink">View Highscores</a>
         <h2 class="timer">Seconds left: <span id="timeLeft">100</span></h2>
     </div>
 </section>
@@ -77,11 +77,11 @@
 
 <div class="container">
     <div class="question" id="score">
-        <h2>Score:<span id="finalScore">user score goes here</span></h2>
-        <label for="initials">Enter your initials:</label>
-        <input type="text" id="initials" name="initials"><br><br> 
-        <button class="visitHighscores">Visit Highscores</button>
-        <button class="startAgain">Start Again</button>
+        <h2 class="finalScoreText">Score: <span id="finalScore"> </span></h2>
+        <label class="formInitials" for="initials">Enter your initials:</label>
+        <input class="formBox" type="text" id="initials" name="initials"><br><br> 
+        <a class="visitHighscores" id="visitHighscores" onclick="storeAnswer()" href="highscores.HTML">Visit Highscores</a>
+        <a class="startAgain" href="index.html">Start Again</a>
     </div>
 </div>
 

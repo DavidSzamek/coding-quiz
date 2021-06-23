@@ -123,14 +123,7 @@ function storeAnswer() {
     const highScoresList = document.getElementById("highscoresList");
     const highscore = JSON.parse(localStorage.getItem("highscore)")) || [];
 
+// console log to demonstrate that score is saved 
+
 console.log(highscore);
 }
-
-// Highscores Page
-
-var userHighscore = localStorage.getItem("highscore");
-
-console.log("userHighscore"), JSON.parse(userHighscore);
-
-
-// visitHighscores.addEventListener("click", storeAnswer(scoreObject,document.getElementById("initials").value));

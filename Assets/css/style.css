@@ -62,9 +62,9 @@
 
 /* Score Page Buttons */
 
-.visitHighscores, .startAgain {
+.visitHighscores, .startAgain, .saveScore {
     margin-bottom: 10px;
-    margin-left: 60px;
+    margin-left: 20px;
     padding: 3px;
     display: inline-block;
 }
